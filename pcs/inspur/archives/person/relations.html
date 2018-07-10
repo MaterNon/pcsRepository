@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		.media-middle {
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 10px;
+		}
+		
+		.media-body {
+			display: table-cell;
+		}
+		
+		.person-photo {
+			max-width: 65px!important;
+			width: 65px!important;
+			height: 80px!important;
+		}
+		
+		.basic-info-focus span {
+			background-color: red;
+			margin-right: 5px;
+			padding: 2px 5px;
+			color: white;
+			border-radius: 2px;
+			font-size: 12px;
+		}
+		
+		.mui-navigate-right {}
+		
+		.mui-table-view-cell>a:not(.mui-btn) {
+			padding-left: 0;
+			margin-left: 0;
+		}
+		
+		.span-detail {
+			margin-right: -35px;
+		}
+		
+		.xm {
+			float: left!important;
+			margin-right: 10px;
+		}
+		
+		.gx {
+			font-size: small;
+			border: 1px solid #00BCD5;
+			padding: 1px 5px;
+			border-radius: 4px;
+		}
+		.company-name,.hklx{
+			float: right;
+			color: #D3D3D3;
+			font-size: small;
+		}
+	</style>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">亲属</a>
+						<ul id="qs" class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										<span class="xm">马家驹</span>
+										<font class="gx">父亲</font>
+										<p class="mui-ellipsis">500232110000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同户人员<span class="hklx">城镇家庭户口</span></a>
+						<ul id="thry" class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										<span class="xm">马家驹</span>
+										<font class="gx">父亲</font>
+										<p class="mui-ellipsis">500232110000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">结婚信息</a>
+						<ul id="jhxx" class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										<span class="xm">张三</span>
+										<span class="djrq">登记日期:2017年4月1日</span>
+										<p class="mui-ellipsis">500232110000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">离婚信息</a>
+						<ul id="lhxx" class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										<span class="xm">张三</span>
+										<span class="djrq">登记日期:2018年4月1日</span>
+										<p class="mui-ellipsis">500232110000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同单位人员<span class="company-name">重庆易才人力公司</span></a>
+						<ul id="tdwry" class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										张三
+										<p class="mui-ellipsis">500232110000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同住宿人员</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">公司新闻</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同乘机人员</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">公司新闻</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同火车人员</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">公司新闻</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同上网人员</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">公司新闻</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">同住址人员</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">公司新闻</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../js/pcs.js"></script>
+		<script type="text/javascript" src="../../../js/template.js"></script>
+		<script type="text/javascript">
+			var server = pcs.getServer();
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			})
+			mui.plusReady(function() {
+				var sfzh = plus.webview.currentWebview().sfzh;
+				getQs(sfzh);
+				getThry(sfzh);
+			})
+
+			function getQs(sfzh) {
+				mui.ajax(server + "/pcsII/a/p/document/" + sfzh + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(!doc.gxrs && !doc.gxrs.gxr && doc.gxrs.gxr.length > 0) {
+							mui("#qs")[0].html(template('tpl-qs', {
+								list: doc.gxrs.gxr
+							}));
+						}
+					}
+				});
+			}
+
+			function getThry(sfzh) {
+				mui.ajax(server + "/pcsII/a/p/familyMember/" + sfzh + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(data.length > 0) {
+							mui("#thry")[0].innerHTML(template('tpl-thry', {
+								list: data
+							}));
+						}
+					}
+				});
+			}
+
+			function getJhxx(sfzh) {
+				mui.ajax(server + "/pcsII/a/p/jhdjxx/" + sfzh + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(data.length > 0) {
+							mui("#jhxx")[0].innerHTML(template('tpl-hyxx', {
+								list: data
+							}));
+						}
+					}
+				});
+			}
+
+			function getlhxx(sfzh) {
+				mui.ajax(server + "/pcsII/a/p/lhdjxx/" + sfzh + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(data.length > 0) {
+							mui("#lhxx")[0].html(template('tpl-hyxx', {
+								list: data
+							}));
+						}
+					}
+				});
+			}
+			function getTdwry(sfzh) {
+				mui.ajax(server + "/pcsII/a/p/sameUnit/" + sfzh + "/0/10/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(data.length > 0) {
+							mui("#tdwry")[0].html(template('tpl-tdwry', {list: data}));
+						}
+					}
+				});
+			}
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					plus.webview.currentWebview().reload();
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+				}, 1500);
+			}
+		</script>
+		<script type="text/html" id="tpl-qs">
+			{{each list as v i}}
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;" class="mui-icon-arrowright">
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						<span class="xm">{{v.xm}}</span>
+						<font class="gx">{{v.gx}}</font>
+						<p class="mui-ellipsis">{{v.sfzh}}</p>
+					</div>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+		<script type="text/html" id="tpl-thry">
+			{{each list as v i}}
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;" class="mui-icon-arrowright">
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						<span class="xm">{{v.XM}}</span>
+						<font class="gx">{{v.RELATION}}</font>
+						<p class="mui-ellipsis">{{v.GMSFHM}}</p>
+					</div>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+		<script type="text/html" id="tpl-hyxx">
+			{{each list as v i}}
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;" class="mui-icon-arrowright">
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						<span class="xm">{{v.XM}}</span>
+						<span class="djrq">{{v.DJRQ}}</font>
+						<p class="mui-ellipsis">{{v.ZJHM}}</p>
+					</div>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+		
+				<script type="text/html" id="tpl-tdwry">
+			{{each list as v i}}
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;" class="mui-navigate-right">
+					<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+					<div class="mui-media-body">
+						{{v.xm}}
+						<p class="mui-ellipsis">{{v.gmsfhm}}</p>
+					</div>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+	</body>
+
+</html>

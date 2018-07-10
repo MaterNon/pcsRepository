@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.div-me-header{
+				margin: 0;
+				margin-top: -15px!important;
+			}
+			.person-archive{
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+
+			<div class="mui-card div-me-header">
+				<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(../images/cbd.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner tc">
+						<a href="" class="tc person-archive">个人档案</a>
+					</div>
+				</div>
+			</div>
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-home"></span>
+			        <div class="mui-media-body">Home</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+			        <div class="mui-media-body">Email</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-chatbubble"></span>
+			        <div class="mui-media-body">Chat</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-location"></span>
+			        <div class="mui-media-body">Location</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-search"></span>
+			        <div class="mui-media-body">Search</div>
+			    </a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			    <a href="#">
+			        <span class="mui-icon mui-icon-phone"></span>
+			        <div class="mui-media-body">Phone</div>
+			    </a>
+			</li>
+			    </ul>
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+	</script>
+
+</html>

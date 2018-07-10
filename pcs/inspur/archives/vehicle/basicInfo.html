@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+	</head>
+	<style type="text/css">
+		.media-middle {
+			/*display: table-cell;*/
+			vertical-align: middle;
+			padding-right: 10px;
+		}
+		
+		.media-body {
+			/*display: table-cell;*/
+			height: 135px;
+			overflow: hidden;
+			/*background-color: blue;*/
+		}
+		
+		.basic-info-list-value {
+			position: absolute;
+			right: 15px;
+		}
+		
+		.basic-info-header-desc {
+			padding: 5px 0;
+		}
+		
+		.basic-info-header-id {
+			font-weight: normal;
+			font-size: 16px;
+			/*margin-left: 20px;*/
+		}
+		
+		.basic-info-list-lxfs,
+		.basic-info-list-dzxx {
+			float: right;
+			color: #203d8c;
+			border: 1px solid #203d8c;
+			padding: 0 5px;
+			font-size: 10px;
+			border-radius: 3px;
+		}
+		
+		.basic-info-focus {
+			position: absolute;
+			bottom: 10px;
+		}
+		
+		.basic-info-focus span {
+			background-color: red;
+			margin-right: 5px;
+			padding: 2px 5px;
+			color: white;
+			border-radius: 2px;
+			font-size: 12px;
+		}
+		
+		.mui-navigate-right span {
+			float: right;
+		}
+		
+		.mui-navigate-right {}
+		
+		.mui-table-view-cell>a:not(.mui-btn) {
+			padding-left: 0;
+			margin-left: 0;
+		}
+		
+		.span-detail {
+			margin-right: -35px;
+		}
+		
+		.syq {
+			float: right;
+			font-size: 12px;
+		}
+		
+		.subtitle {
+			position: absolute;
+			top: 60px;
+		}
+		
+		.zt {
+			margin-left: 5px;
+			font-size: 12px;
+			background-color: red;
+			color: white;
+			border-radius: 2px;
+			padding: 1px 5px;
+		}
+	</style>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="mui-table-view basic-info-card">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<div class="media-middle">
+								<img class="mui-media-object mui-pull-left vehicle-photo" src="../../images/photo-1.png" id="photo">
+							</div>
+							<div class="media-body">
+								<h4 class="basic-info-name"><span id="xm" class="basic-info-header-name xm">鲁AY6139</span><span class="zt">正常</span><span class="syq">个人</span></h4>
+								<h5 class="subtitle"><span id="sfzh" class="basic-info-header-id sfzh">保时捷 S911 </span></h5>
+								<h5 class="basic-info-focus"><span>前科</span><span>吸毒</span></h5>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						所有人<span id="syr" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						证件号码<span id="zjhm" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						手机号码 <span id="sjhm" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						车辆类型 <span id="lxdh" class="basic-info-list-value">1888888888</span>
+					</li>
+					<li class="mui-table-view-cell">
+						车身颜色 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						登记日期 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						发牌日期 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						发行驶证日期 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						保险终止日期 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						经办人 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						发动机型号 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						制造商 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						排量 <span id="syxz" class="basic-info-list-value">非营运</span>
+					</li>
+					<li class="mui-table-view-cell">
+						获得方式 <span id="hdfs" class="basic-info-list-value">购买</span>
+					</li>
+					<li class="mui-table-view-cell">
+						车辆来源 <span id="clly" class="basic-info-list-value">注册</span>
+					</li>
+					<li class="mui-table-view-cell">
+						车辆用途 <span id="clyt" class="basic-info-list-value">普通汽车</span>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">住所详细地址</a>
+						<div class="mui-collapse-content">
+							<p>重庆市江北区XXX</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../js/pcs.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				keyEventBind: {
+					backbutton: false //关闭back按键监听
+				},
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			})
+			var server = pcs.getServer();
+			mui.plusReady(function() {
+				var hphm = plus.webview.currentWebview().hphm;
+				document.getElementById("xm").innerText = hphm;
+				var hpzl = plus.webview.currentWebview().hpzl;
+				initBasicInfo(hphm, hpzl);
+				//				getContact(sfzh);
+			})
+
+			function initBasicInfo(hphm, hpzl) {
+				mui.ajax(server + "/pcsII/cq/a/v/vehicle/" + hphm + "/" + hpzl + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(!pcs.isEmpty(data)) {
+							console.log(2222 + data)
+							document.getElementById("syr").innerText = data.SYR;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("sjhm").innerText = data.SJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+							document.getElementById("zjhm").innerText = data.ZJHM;
+						}
+					}
+				});
+			}
+			/**
+			 * 获取联系方式
+			 * @param {Object} sfzh
+			 */
+			function getContact(sfzh) {
+				mui.ajax(server + '/cq/a/p/contact/' + sfzh + '/', {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(!pcs.jsonEmpty(data)) {
+							var contactObj = {};
+							var html = "";
+							mui.each(data, function(i, v) {
+								if(contactObj[v.LXDH]) {
+
+								} else {
+									contactObj[v.LXDH] = true;
+									html += '<li class="mui-table-view-cell">' + v.LXDH + '<span class="basic-info-list-lxfs">来源:' + v.BZ + ' 时间:' + v.RQ.substring(0, 10) + '</span></li>';
+
+								}
+							})
+							document.getElementById("lxfs").innerHTML = html
+						}
+					}
+				})
+			}
+
+			function pullupRefresh() {
+				setTimeout(function() {
+					plus.webview.currentWebview().reload();
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //参数为true代表没有更多数据了。
+				}, 1000);
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>搜索</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<style>
+			html,
+			body {
+				/*background-color: #efeff4;*/
+			}
+			
+			.title {
+				padding: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				background-color: #fff;
+			}
+			
+			.logo {
+				margin-top: 0;
+				padding: 40px 0;
+				/*height: 100px;*/
+			}
+			
+			.logo-name {
+				color: white;
+				font-weight: normal;
+			}
+			
+			.logo-desc {
+				color: #C0C0C0;
+			}
+			
+			.header {
+				background-color: #000;
+				padding-bottom: 30px;
+			}
+			
+			.search-bar {
+				margin: 30px 0;
+			}
+			
+			.mui-btn-search {
+				background-color: #0F0F33;
+				color: white;
+				border: 1px solid #0F0F33;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="header">
+				<h1 class="tc logo"><img src="../images/logo.png"/ alt="图标"></h1>
+				<!--<h3 class="tc logo-name">重庆警务云搜索平台</h3>
+				<h5 class="tc logo-desc">CHONGQING POLICE CLOUD SEARCH PLATFORM</h5>-->
+			</div>
+			<div class="mui-row search-bar tc">
+				<div class="mui-input-row mui-search  mui-col-sm-10">
+					<input id="search" type="search" class="mui-input-clear search" placeholder="姓名/身份证号/车牌号....">
+				</div>
+				<div class="mui-col-sm-2"><button id="search1" type="button" class="mui-btn mui-btn-search ">搜索</button></div>
+			</div>
+
+			<div class="category">
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-home"></span>
+							<div class="mui-media-body">人员信息</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-email"></span>
+							<div class="mui-media-body">案件信息</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-chatbubble"></span>
+							<div class="mui-media-body">物品信息</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-location"></span>
+							<div class="mui-media-body">地址信息</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-search"></span>
+							<div class="mui-media-body">组织信息</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-6">
+						<a href="#">
+							<span class="mui-icon mui-icon-phone"></span>
+							<div class="mui-media-body">通讯录</div>
+						</a>
+					</li>1
+				</ul>
+			</div>
+
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/pcs.js" ></script>
+		<script>
+			mui.init();
+			var theme = pcs.getTheme();
+			mui.plusReady(function() {
+				//默认标题栏背景颜色
+				var titlebg = plus.storage.getItem("titlebg") || '#f7f7f7';
+				//默认标题栏文字颜色
+				var titlecolor = plus.storage.getItem("titlecolor") || '#000000';
+				document.getElementById("search1").addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'search-result.html',
+						id: 'search-result',
+						styles: {
+							titleNView: { // 窗口的标题栏控件
+								autoBackButton:true,
+								titleColor: theme.color, // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+								backgroundColor: theme.bg, // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+								progress: { // 标题栏控件的进度条样式
+									color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+									height: "2px" // 进度条高度,默认值为"2px"         
+								}
+							},
+							extras: {
+								queryText: document.getElementById("search").value
+							}
+						}
+
+					})
+				})
+			})
+
+			function search() {
+				mui.openWindow({
+					url: 'search-result.html',
+					id: 'search-result',
+					styles: {
+						titleNView: { // 窗口的标题栏控件
+							titleColor: "#000000", // 字体颜色,颜色值格式为"#RRGGBB",默认值为"#000000"
+							backgroundColor: "#F7F7F7", // 控件背景颜色,颜色值格式为"#RRGGBB",默认值为"#F7F7F7"
+							progress: { // 标题栏控件的进度条样式
+								color: "#00FF00", // 进度条颜色,默认值为"#00FF00"  
+								height: "2px" // 进度条高度,默认值为"2px"         
+							},
+							splitLine: { // 标题栏控件的底部分割线，类似borderBottom
+								color: "#CCCCCC", // 分割线颜色,默认值为"#CCCCCC"  
+								height: "1px" // 分割线高度,默认值为"2px"
+							}
+						},
+						extras: {
+							queryText: mui('#search')[0].value
+						}
+					}
+
+				})
+			}
+		</script>
+	</body>
+
+</html>

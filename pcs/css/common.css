@@ -1,0 +1,52 @@
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.main-title {}
+
+.sub-title {
+	font-size: small;
+	color: #C0C0C0;
+}
+
+.standard-color {
+	color: #203d8c;
+}
+
+
+/**
+ * 标题栏颜色
+ */
+
+.mui-bar-nav {
+	/*background-color: #152b62;*/
+}
+
+.person-photo {
+	max-width: 65px!important;
+	width: 65px!important;
+	height: 80px!important;
+}
+
+.vehicle-photo {
+	max-width: 180px!important;
+	width: 180px!important;
+	height: 135px!important;
+}
+
+.mui-table-view:before,
+.mui-table-view:after {
+	height: 0;
+}
+
+.basic-info-list-value {
+	position: absolute;
+	right: 15px;
+}
+.mui-table-view-cell .mui-media a{
+	margin-left: -31px;
+}

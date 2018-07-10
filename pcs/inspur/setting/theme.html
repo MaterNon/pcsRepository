@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改主题</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		body {
+			background-color: white;
+			text-align: center;
+		}
+		
+		.mui-row {
+			padding-top: 10px;
+			background-color: white;
+		}
+		
+		p {
+			margin-bottom: 0;
+		}
+		
+		.theme-block {
+			font-size: 0;
+			text-align: center;
+			display: block;
+			/*margin: 10px 1px;*/
+			padding: 40px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			background-color: red;
+		}
+		
+		.color-defalut: {
+			background-color: #EFEFF4;
+		}
+		
+		.color-ddh {
+			background-color: rgba(96, 125, 139, 255);
+		}
+		
+		.color-xcl {
+			background-color: #50bba7;
+		}
+		
+		.color-yjl {
+			background-color: rgba(49, 64, 71, 255);
+		}
+		
+		.color-zhl {
+			background-color: rgba(33, 150, 243, 255);
+		}
+		
+		.color-qxl {
+			background-color: #00bcd5;
+		}
+		
+		.color-block {
+			height: 80px;
+			width: 80px;
+			margin: 10px auto;
+		}
+		
+		.mui-content {
+			padding-top: 100px;
+			background-color: white;
+		}
+	</style>
+
+	<body>
+		<div class="mui-content">
+			<div class="mui-row">
+				<div class="mui-col-sm-3" data-bg="#F7F7F7" data-color="#000000">
+					<p class="color-block color-defalut"></p>
+					<p class="color-desc">默认</p>
+				</div>
+				<div class="mui-col-sm-3" data-bg="#607d8b" data-color="#FFFFFF">
+					<p class="color-block color-ddh"></p>
+					<p class="color-desc">低调灰</p>
+				</div>
+				<div class="mui-col-sm-3" data-bg="#50bba7" data-color="#FFFFFF">
+					<p class="color-block color-xcl"></p>
+					<p class="color-desc">小草绿</p>
+				</div>
+				<div class="mui-col-sm-3" data-bg="#314047" data-color="#FFFFFF">
+					<p class="color-block color-yjl"></p>
+					<p class="color-desc">夜间蓝</p>
+				</div>
+				<div class="mui-col-sm-3" data-bg="#2196f3" data-color="#FFFFFF">
+					<p class="color-block color-zhl"></p>
+					<p class="color-desc">知乎蓝</p>
+				</div>
+				<div class="mui-col-sm-3" data-bg="#00bcd5" data-color="#FFFFFF">
+					<p class="color-block color-qxl"></p>
+					<p class="color-desc">清新绿</p>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/pcs.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var theme = pcs.getTheme();
+			mui.plusReady(function() {
+				mui('.mui-row').on("tap", "div", function() {
+					var background = this.getAttribute("data-bg");
+					var color = this.getAttribute("data-color");
+					theme.bg = background;
+					theme.color = color;
+					theme.style = "light";
+					pcs.setTheme(theme);
+					var wv = plus.webview.currentWebview();
+					mui.each(plus.webview.all(), function() {
+						var id = this.id;
+						if(id.indexOf("index.html")>-1 || id.indexOf("setting.html")>-1 || id.indexOf("theme.html")>-1) {
+							this.setStyle({
+								titleNView: {
+									backgroundColor: theme.bg,
+									titleColor: theme.color
+								}
+							})
+						}else if(id.indexOf("main")>-1){
+							this.reload();
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>
