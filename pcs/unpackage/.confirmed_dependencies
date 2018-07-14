@@ -1,0 +1,127 @@
+{
+	"index.html": {
+		"refer": [
+			"inspur/main.html",
+			"inspur/guide.html",
+			"inspur/tab-webview-subpage-contact.html",
+			"inspur/tab-webview-subpage-about.html",
+			"inspur/tab-webview-subpage-chat.html",
+			"inspur/tab-webview-subpage-setting.html",
+			"inspur/tab-webview-subpage-search.html",
+			"login.html"
+		],
+		"resources": [
+			"inspur/tab-webview-subpage-about.html"
+		]
+	},
+	"inspur/main.html": {
+		"resources": [
+			"inspur/tab-webview-subpage-about.html",
+			"inspur/tab-webview-subpage-setting.html",
+			"inspur/tab-webview-subpage-index.html",
+			"inspur/tab-webview-subpage-search.html"
+		],
+		"refer": [
+			"inspur/tab-webview-subpage-contact.html",
+			"inspur/tab-webview-subpage-about.html",
+			"inspur/tab-webview-subpage-chat.html",
+			"inspur/tab-webview-subpage-setting.html",
+			"inspur/tab-webview-subpage-search.html",
+			"inspur/tab-webview-subpage-me.html",
+			"inspur/tab-webview-subpage-index.html"
+		]
+	},
+	"inspur/guide.html": {
+		"refer": [
+			"inspur/main.html"
+		],
+		"resources": []
+	},
+	"login.html": {
+		"refer": [
+			"index.html",
+			"main.html",
+			"inspur/main.html",
+			"inspur/guide.html",
+			"inspur/feedback.html"
+		],
+		"resources": []
+	},
+	"main.html": {
+		"resources": [
+			"inspur/tab-webview-subpage-about.html"
+		],
+		"refer": [
+			"inspur/tab-webview-subpage-search.html",
+			"inspur/tab-webview-subpage-contact.html",
+			"inspur/tab-webview-subpage-about.html",
+			"inspur/tab-webview-subpage-setting.html"
+		]
+	},
+	"inspur/tab-webview-subpage-search.html": {
+		"refer": [
+			"inspur/search-result.html",
+			"inspur/offcanvas-drag-left.html"
+		],
+		"resources": []
+	},
+	"inspur/search-result.html": {
+		"resources": [
+			"inspur/result/czrk.html"
+		],
+		"refer": [
+			"inspur/result/czrk.html",
+			"inspur/result/asjxx.html",
+			"inspur/result/jdcxx.html",
+			"inspur/result-resource-list.html",
+			"inspur/archives/person.html",
+			"inspur/archives/vehicle.html",
+			"inspur/archives/case.html",
+			"inspur/archives/person/main.html",
+			"inspur/archives/vehicle/main.html"
+		]
+	},
+	"inspur/tab-webview-subpage-setting.html": {
+		"refer": [
+			"inspur/feedback.html",
+			"inspur/archives/person.html",
+			"inspur/setting/theme.html",
+			"inspur/setting/changepw.html",
+			"inspur/setting/guide.html",
+			"inspur/setting/about.html"
+		],
+		"resources": []
+	},
+	"inspur/archives/person.html": {
+		"resources": [
+			"inspur/archives/person/basicInfo.html"
+		],
+		"refer": [
+			"inspur/archives/person/basicInfo.html",
+			"inspur/archives/person/relations.html",
+			"inspur/archives/person/activities.html",
+			"inspur/archives/person/focused.html"
+		]
+	},
+	"inspur/archives/person/main.html": {
+		"resources": [
+			"inspur/archives/person/basicInfo.html"
+		],
+		"refer": [
+			"inspur/archives/person/basicInfo.html",
+			"inspur/archives/person/cases.html",
+			"inspur/archives/person/relations.html",
+			"inspur/archives/person/activities.html",
+			"inspur/archives/person/focused.html",
+			"inspur/archives/person/properties.html"
+		]
+	},
+	"inspur/archives/vehicle/main.html": {
+		"resources": [
+			"inspur/archives/vehicle/basicInfo.html"
+		],
+		"refer": [
+			"inspur/archives/vehicle/basicInfo.html"
+		]
+	}
+}

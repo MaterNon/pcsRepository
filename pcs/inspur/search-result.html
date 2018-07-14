@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/common.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		.mui-bar input[type=search] {
+			width: 80%;
+		}
+		
+		header {
+			text-align: center;
+		}
+		
+		html,
+		body {
+			background-color: #efeff4;
+		}
+		
+		span.mui-icon {
+			font-size: 14px;
+			color: #007aff;
+			margin-left: -15px;
+			padding-right: 10px;
+		}
+		
+		.mui-off-canvas-left {
+			color: #fff;
+		}
+		
+		.title {
+			margin: 10px;
+			color: black;
+		}
+		
+		.title+.content {
+			margin: 10px;
+			color: #bbb;
+			text-indent: 1em;
+			font-size: 14px;
+			line-height: 24px;
+		}
+		
+		.category-second {
+			background: #333;
+			color: white;
+		}
+		
+		.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell:after {
+			background-color: #222;
+		}
+		
+		.mui-search .mui-placeholder .mui-icon {
+			font-family: Muiicons;
+			font-weight: 400;
+			position: absolute;
+			top: 50%;
+			margin-top: -18px;
+			content: '\e466';
+			font-size: 20px;
+			right: auto;
+			left: 20px;
+			display: block;
+			line-height: 34px;
+			1
+		}
+		
+		.mui-navigate-right:after,
+		.mui-push-right:after {
+			right: 5px;
+		}
+		
+		.bgcolor-white {
+			background-color: white;
+		}
+		
+		.condition-item {
+			background-color: #fafafa;
+			border: 2px solid white;
+			margin: 0 -1px;
+			font-size: small;
+			padding: 10px;
+			color: #222222;
+			border-radius: 5px;
+			height: 64px;
+			text-align: center;
+		}
+		
+		.condition-list {
+			/*font-size: 0;*/
+		}
+	</style>
+
+	<body>
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable mui-draggable mui-slide-in">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-right mui-transitioning" id="offCanvasSide">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap mui-transitioning">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<h1 class="mui-title" id="resource-title">常住人口(22)<span class="mui-icon mui-icon-arrowdown"></span></h1>
+					<a href="#offCanvasSide" class="mui-icon mui-icon-bars mui-pull-right"></a>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div id="offCanvasContentScroll" class="mui-scroll">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" data-type="person">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										<span class="maintitle">朱丽叶</span>
+										<span class="subtitle">身份证号：500XXhao</span>
+										<p class="mui-ellipsis-2">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" data-type="vehicle">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										渝A00001 马凤
+										<p class="mui-ellipsis">联系方式:1231232132 号牌种类:普通摩托车</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" data-type="case">
+									<img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+									<div class="mui-media-body">
+										入室盗窃 X5000000000
+										<p class="mui-ellipsis">案件来源</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/pcs.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true
+			});
+			var theme = pcs.getTheme();
+			//主界面和侧滑菜单界面均支持区域滚动；
+			mui('#offCanvasSideScroll').scroll();
+			mui('#offCanvasContentScroll').scroll();
+			mui.plusReady(function() {
+				//				alert(plus.webview.currentWebview().queryText)
+				//设置搜索框搜索词
+				//					mui('#search')[0].value = plus.webview.currentWebview().queryText
+				mui.toast(plus.webview.currentWebview().queryText);
+				//默认标题栏背景颜色
+				var titlebg = plus.storage.getItem("titlebg") || '#f7f7f7';
+				//默认标题栏文字颜色
+				var titlecolor = plus.storage.getItem("titlecolor") || '#000000';
+				var reourceTitle = document.getElementById('resource-title');
+
+				reourceTitle.addEventListener("tap", function() {
+					mui.openWindow({
+						url: 'result-resource-list.html',
+						id: "result-resource-list",
+						styles: {
+							titleNView: {
+								autoBackButton: true,
+								backgroundColor: theme.bg,
+								titleColor: theme.color
+							}
+						},
+						show: {
+							autoShow: true, //页面loaded事件发生后自动显示，默认为true
+							duration: "200" //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						}
+					})
+				})
+			})
+
+			function toggleSlide() {
+				mui('.mui-off-canvas-wrap').offCanvas().toggle();
+			}
+			mui('#offCanvasContentScroll').on("tap", "a", function() {
+				var type = this.getAttribute("data-type");
+				var html = "archives/" + type +"/main.html";
+				mui.openWindow(html, 'archive-' + type, {
+					show: {
+						autoShow: true, //页面loaded事件发生后自动显示，默认为true
+						duration: "200" //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					},
+					styles: {
+						titleNView: {
+							autoBackButton: true,
+							backgroundColor: theme.bg,
+							titleColor: theme.color
+						}
+					},
+					waiting: {
+						autoShow: false
+					},
+					extras:{
+						dataid:"鲁AY6139",
+						datatype:"02"
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

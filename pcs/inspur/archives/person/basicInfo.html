@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	</head>
+	<style type="text/css">
+		.media-middle {
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 10px;
+		}
+		
+		.media-body {
+			display: table-cell;
+		}
+		
+		.basic-info-list-value {
+			position: absolute;
+			right: 15px;
+		}
+		
+		.basic-info-header-desc {
+			padding: 5px 0;
+		}
+		
+		.basic-info-header-id {
+			font-weight: normal;
+			font-size: 16px;
+			margin-left: 20px;
+		}
+		
+		.basic-info-list-lxfs,
+		.basic-info-list-dzxx {
+			float: right;
+			color: #203d8c;
+			border: 1px solid #203d8c;
+			padding: 0 5px;
+			font-size: 10px;
+			border-radius: 3px;
+		}
+		
+		.person-photo {
+			max-width: 65px!important;
+			width: 65px!important;
+			height: 80px!important;
+		}
+		
+		.basic-info-focus span {
+			background-color: red;
+			margin-right: 5px;
+			padding: 2px 5px;
+			color: white;
+			border-radius: 2px;
+			font-size: 12px;
+		}
+		
+		.mui-navigate-right span {
+			float: right;
+		}
+		
+		.mui-navigate-right {}
+		
+		.mui-table-view-cell>a:not(.mui-btn) {
+			padding-left: 0;
+			margin-left: 0;
+		}
+		
+		.span-detail {
+			margin-right: -35px;
+		}
+		
+		.track>a {}
+		
+		#pullrefresh {
+			/*padding: 20px 15px 10px;*/
+		}
+	</style>
+
+	<body>
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="mui-table-view basic-info-card">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<div class="media-middle">
+								<img class="mui-media-object mui-pull-left person-photo" src="../../images/photo-1.png" id="photo">
+							</div>
+							<div class="media-body">
+								<h4 class="basic-info-name"><span id="xm" class="basic-info-header-name xm">-</span><span id="sfzh" class="basic-info-header-id sfzh">-</span></h4>
+								<h5 id="zz" class="basic-info-header-desc zz">-</h5>
+								<h5 class="basic-info-focus"><span>前科</span><span>吸毒</span></h5>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						民族 <span id="mz" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						性别 <span id="xb" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						出生日期 <span id="csrq" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						婚姻状况 <span id="hyzk" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						文化程度 <span id="whcd" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						职业 <span id="zy" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell">
+						户号 <span id="hh" class="basic-info-list-value">-</span>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">联系方式</a>
+						<ul class="mui-table-view mui-table-view-chevron" id="lxfs">
+							<li class="mui-table-view-cell tc">
+								暂无数据
+							</li>
+						</ul>
+					</li>
+					<!--<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#">地址信息</a>
+								<ul class="mui-table-view mui-table-view-chevron">
+									<li class="mui-table-view-cell">
+										重庆市潼南区长寿村大喜组<span class="basic-info-list-dzxx">来源：常住人口</span>
+									</li>
+									<li class="mui-table-view-cell">
+										重庆市武隆区仙女镇仙女村仙女组仙女2号重庆市武隆区仙女镇仙女村仙女组仙女2号<span class="basic-info-list-dzxx">来源：常住人口</span>
+									</li>
+									<li class="mui-table-view-cell">
+										重庆市武隆区仙女镇仙女村仙女组仙女2号
+									</li>
+								</ul>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#">历史照片</a>
+								<div class="mui-collapse-content">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object person-photo" src="../../images/photo-1.png">
+												<div class="mui-media-body">常住人口</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object person-photo" src="../../images/photo-1.png">
+												<div class="mui-media-body">户籍照片</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>-->
+				</ul>
+			</div>
+		</div>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../../js/pcs.js" ></script>
+		<script type="text/javascript">
+			mui.init({
+				keyEventBind: {
+					backbutton: false //关闭back按键监听
+				}
+			})
+			var server = pcs.getServer();
+			mui.plusReady(function(){
+				var sfzh = plus.webview.currentWebview().sfzh;
+				initBasicInfo(sfzh);
+				getContact(sfzh);
+			})
+			function initBasicInfo(sfzh) {
+				mui.ajax(server + "/pcsII/cq/a/p/getPersonBasicByZjhm/" + sfzh + "/", {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(!pcs.isEmpty(data)) {
+							document.getElementById("xm").innerText = data.XM;
+							document.getElementById("sfzh").innerText = data.GMSFHM;
+							document.getElementById("zz").innerText = pcs.nullFormat(data.ZZ);
+							document.getElementById("mz").innerText = pcs.nullFormat(data.MZMC);
+							document.getElementById("xb").innerText = pcs.nullFormat(data.XBMC);
+							document.getElementById("csrq").innerText = pcs.dateFormat(pcs.nullFormat(data.CSRQ),'yyyy年MM月dd日');
+							document.getElementById("hyzk").innerText = pcs.nullFormat(data.HYZKMC);
+							document.getElementById("whcd").innerText = pcs.nullFormat(data.WHCDMC);
+							document.getElementById("zy").innerText = pcs.nullFormat(data.ZYMC);
+							document.getElementById("hh").innerText = pcs.nullFormat(data.HH);
+						}
+					}
+				});
+			}
+			/**
+			 * 获取联系方式
+			 * @param {Object} sfzh
+			 */
+			function getContact(sfzh) {
+				mui.ajax(server + '/cq/a/p/contact/' + sfzh + '/', {
+					type: 'post',
+					dataType: 'json',
+					success: function(data) {
+						if(!pcs.jsonEmpty(data)) {
+							var contactObj = {};
+							var html = "";
+							mui.each(data, function(i, v) {
+								if(contactObj[v.LXDH]) {
+									
+								} else {
+									contactObj[v.LXDH] = true;
+									html += '<li class="mui-table-view-cell">' + v.LXDH + '<span class="basic-info-list-lxfs">来源:' + v.BZ + ' 时间:' + v.RQ.substring(0, 10) + '</span></li>';
+
+								}
+							})
+							document.getElementById("lxfs").innerHTML = html
+						}
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

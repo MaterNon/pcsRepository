@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 22%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.login-tips {
+				text-align: center;
+			}
+			
+			.logo {
+				text-align: center;
+				padding: 100px 0;
+				background-color: #007aff;
+				color: white;
+				font-size: 40px;
+				font-weight: normal;
+			}
+			
+			.tc {
+				text-align: center;
+			}
+			
+			.mui-input-group:before,
+			.mui-input-group:after {
+				height: 0;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<h1 class="logo">渝警飞度</h1>
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<input id='id' type="text" class="mui-input-clear mui-input tc" placeholder="身份证号">
+				</div>
+				<div class="mui-input-row">
+					<input id='password' type="password" class="tc mui-input-password" placeholder="密码">
+				</div>
+			</form>
+
+			<div class="mui-content-padded">
+				<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+				<button id='reset' class="mui-btn mui-btn-block mui-btn-primary">重置启动页</button>
+				<p class="login-tips">登陆遇到问题？请致电
+					<a href="tel:023 63962496">023-63962496</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pcs.js"></script>
+		<script type="text/javascript" src="js/mui.enterfocus.js"></script>
+		<script>
+			mui.init();
+			mui.plusReady(function() {
+				var showGuide = plus.storage.getItem("FirstLanch");
+				
+				var settings = pcs.getSettings();
+				var state = pcs.getState();
+				//设置状态栏颜色
+				plus.navigator.setStatusBarBackground("#f7f7f7");
+				plus.navigator.setStatusBarStyle('dark');
+				//应用主页
+				
+				var toMain = function() {
+					mui.openWindow('inspur/main.html','main',{})
+				};
+				//检查登陆状态
+				if(state.logined) {
+					toMain();
+				}
+				if(showGuide) {
+					plus.navigator.closeSplashscreen();
+					plus.navigator.setFullscreen(false);
+				} else {
+					mui.openWindow({
+						id: 'guide',
+						url: 'inspur/guide.html',
+						styles: {
+							popGesture: "none"
+						},
+						show: {
+							aniShow: 'none'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}
+				//初始化相关按钮
+				var loginButton = document.getElementById('login');
+				var idBox = document.getElementById('id');
+				var passwordBox = document.getElementById('password');
+				var resetBotton = document.getElementById("reset");
+				//登陆
+				loginButton.addEventListener('tap', function(event) {
+					//检查网络连接
+					if(plus.networkinfo.getCurrentType() == plus.networkinfo.CONNECTION_NONE) {
+						plus.nativeUI.alert("当前设备无网络连接");
+						return;
+					}
+					var loginInfo = {
+						id: idBox.value,
+						password: passwordBox.value
+					};
+					pcs.login(loginInfo, function(err) {
+						if(err) {
+							plus.nativeUI.alert(err);
+							return;
+						}
+						toMain();
+					});
+				});
+				resetBotton.addEventListener('tap', function(event) {
+					plus.storage.removeItem("FirstLanch");
+				});
+				//输入框自动聚焦
+				mui.enterfocus('#login-form input', function() {
+					mui.trigger(loginButton, 'tap');
+				});
+			})
+		</script>
+	</body>
+
+</html>
