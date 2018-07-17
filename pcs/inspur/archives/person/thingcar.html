@@ -8,302 +8,206 @@
 		<link href="../../../css/mui.min.css" rel="stylesheet" />
 		<script type="text/javascript" src="../../../js/mui.js" ></script>
 		<style>
-			.content{
+			table{
 				width: 100%;
 			}
-			.tc-car-table{
-				padding: 0;
-				width: 100%;
+			
+			.li-card-mes-table,p{
+				font-size:12px ;
+			}
+			.li-card-mes-table td{
+				width: 25%;
+			}
+			li{
+				margin-bottom: 10px;
 				background-color: white;
-				font-size: 12px;
-				text-align: center;
-				font-weight: 800;
-			}
-			.tc-car-table td{
-				border-right: 1px solid #929292;
-				border-bottom: 1px solid #929292;
-				color: #929292;
-			}
-			.tc-car-table td:nth-of-type(even){
-				color: #000000;
-			}
-			.wf-td-title{
-				height: 30px;
+				border: 0px solid;
+				box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
 				
 			}
-			.wf-td-title-o{
-				height: 30px;
-				
+			.mui-table-view{
+				background-color: #efeff4;				
 			}
-
-			.car-tc-title{
-				color: black;
-				line-height: 24px;
-				margin-left:65px ;
+			.li-card-mes-table-llist img{
+				width: 80px;
+				height: 80px;
 			}
-			img{
-				    float: left;
-			}
-			.td-tc-kuai{
-				border-left: 5px solid #065BB7;
-				margin-left: -2px;
-				
-			}
-			.imgcart{
-				width: 155px;
-				height: 110px;
-			}
-			.car-wxjl-list{
-				width: 100%;
-				text-align: center;
-				
-			}
-			.car-wxjl-list  thead td{
-				font-weight: 800;
-			}
-			.car-wxjl-list td{
-				border: 1px solid #929292;
-				color: black;
-				font-size: 12px;
-				font-weight: 400;
-			}
-			.car-wxjl-list img{
-				width: 110px;
-				height: 90px;
+			.a-kuai-s{
+				border-left: 4px solid blue;
 			}
 		</style>
+			
 	</head>
 
 	<body>
 		<!--
-        	作者：caihaifeng		
-        	时间：2018-07-16
-        	描述：人员档案物品车辆
+        	作者：蔡海峰
+        	时间：2018-07-17
+        	描述：物品车辆
         -->
-		<div class="content">
-			<table class="tc-car-table">
-				<tr>
-					<td colspan="3" class="wf-td-title-o mui-text-left">
-						<img src="../../../images/tccart.png"  />
-						<div class="car-tc-title">
-							车辆（2）
-						</div>
-					</td>
-					
-				</tr>
-				<tr>
-					<td rowspan="5" width="20%">
-						<img src="../../../images/photo-vehicle.png"  class="imgcart" />
-					</td>
-				</tr>
-				<tr>
-					<td>号牌号码</td>
-					<td>渝AGG266</td>
-				</tr>
-				<tr>
-					<td>车辆所有人</td>
-					<td>朱立科</td>
-				</tr>
-				<tr>
-					<td>颜色及号牌种类</td>
-					<td>（灰）小型汽车</td>
-				</tr>
-				<tr>
-					<td>车辆状态</td>
-					<td>正常</td>
-				</tr>
-				<tr>
-					<td colspan="3" class="wf-td-title mui-text-left">
-						<ul class="mui-table-view"> 
-					        <li class="mui-table-view-cell mui-collapse">
-					            <a class="mui-navigate-right" href="#">
-					            	<div class="td-tc-kuai">
-										&nbsp;&nbsp;渝AGG266 违法记录(11)
-									</div>
-					            </a>
-					            <div class="mui-collapse-content">
-					              	<table class="car-wxjl-list">
-					              		<thead>
-					              			<td>时间</td>
-					              			<td>当事人</td>
-					              			<td>地点</td>
-					              			<td>违法行为</td>
-					              			<td>处罚情况</td>
-					              		</thead>
-					              		<tbody>
-					              			<tr>
-					              				<td>
-					              					2018-04-01 11:24:23
-					              				</td>		
-					              				<td>
-					              					<img src="../../../images/photo-1.png" />
-					              					<p>某某某</p>
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					罚款200元扣3分
-					              				</td>
-					              			</tr>
-					              			<tr>
-					              				<td>
-					              					2018-04-01 11:24:23
-					              				</td>		
-					              				<td>
-					              					<img src="../../../images/photo-1.png" />
-					              					<p>某某某</p>
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					罚款200元扣3分
-					              				</td>
-					              			</tr>
-					              			<tr>
-					              				<td>
-					              					2018-04-01 11:24:23
-					              				</td>		
-					              				<td>
-					              					<img src="../../../images/photo-1.png" />
-					              					<p>某某某</p>
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					罚款200元扣3分
-					              				</td>
-					              			</tr>
-					              			<tr>
-					              				<td>
-					              					2018-04-01 11:24:23
-					              				</td>		
-					              				<td>
-					              					<img src="../../../images/photo-1.png" />
-					              					<p>某某某</p>
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					罚款200元扣3分
-					              				</td>
-					              			</tr>
-					              		</tbody>
-					              	</table>
-					            </div>
-					       </li>
-					    </ul>
-					</td>
-					
-				</tr>
-				
-				
-				
-				
-					<tr>
-					<td rowspan="5" width="20%">
-						<img src="../../../images/photo-vehicle.png"  class="imgcart" />
-					</td>
-				</tr>
-				<tr>
-					<td>号牌号码</td>
-					<td>渝AGG266</td>
-				</tr>
-				<tr>
-					<td>车辆所有人</td>
-					<td>朱立科</td>
-				</tr>
-				<tr>
-					<td>颜色及号牌种类</td>
-					<td>（灰）小型汽车</td>
-				</tr>
-				<tr>
-					<td>车辆状态</td>
-					<td>正常</td>
-				</tr>
-				<tr>
-					<td colspan="3" class="wf-td-title mui-text-left">
-						<ul class="mui-table-view"> 
-					        <li class="mui-table-view-cell mui-collapse">
-					            <a class="mui-navigate-right" href="#">
-					            	<div class="td-tc-kuai">
-										&nbsp;&nbsp;渝AGG266 违法记录(11)
-									</div>
-					            </a>
-					            <div class="mui-collapse-content">
-					              	<table class="car-wxjl-list">
-					              		<thead>
-					              			<td>时间</td>
-					              			<td>当事人</td>
-					              			<td>地点</td>
-					              			<td>违法行为</td>
-					              			<td>处罚情况</td>
-					              		</thead>
-					              		<tbody>
-					              			<tr>
-					              				<td>
-					              					2018-04-01 11:24:23
-					              				</td>		
-					              				<td>
-					              					<img src="../../../images/photo-1.png" />
-					              					<p>某某某</p>
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              					重庆市渝中区棉花街19号附3号25
-					              				</td>
-					              				<td>
-					              					罚款200元扣3分
-					              				</td>
-					              			</tr>
-					              		</tbody>
-					              	</table>
-					            </div>
-					       </li>
-					    </ul>
-					</td>
-					
-				</tr>
-			</table>
+		    <ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		           <table class="li-card-mes-table">
+		           		<tr>
+		           			<td rowspan="5">
+		           				<img src="../../../images/photo-vehicle.png"/>
+		           			</td>
+		           			<td>所有人</td>
+		           			<td>朱立科</td>
+		           		</tr>
+		           		<tr>
+		           			<td>
+		           				号牌号码
+		           			</td>
+		           			<td>
+		           				渝AGG266
+		           			</td>
+		           		</tr>
+		           		<tr>
+		           			<td>
+		           				品牌
+		           			</td>
+		           			<td>
+		           				速腾牌 SAGITAR
+		           			</td>
+		           		</tr>
+		           		<tr>
+		           			<td>
+		           				车辆状态
+		           			</td>
+		           			<td>
+		           				正常
+		           			</td>
+		           		</tr>
+		           		<tr>
+		           			<td>
+		           				颜色及号牌种类
+		           			</td>
+		           			<td>
+		           				（会）小型汽车
+		           			</td>
+		           		</tr>
+		           		<tr>
+		           			<td colspan="3">
+		           				<ul class="mui-table-view"> 
+							        <li class="mui-table-view-cell mui-collapse">
+							            <a class="mui-navigate-right a-kuai-s" href="#">渝AGG266 违法记录（11）</a>
+							            <div class="mui-collapse-content">
+							            	<ul class="mui-table-view">
+												<li class="mui-table-view-cell">
+													<div class="mui-row">
+														<table class="li-card-mes-table-llist">
+															<tr>
+																<td rowspan="2"><img src="../../../images/photo-1.png"/></td>
+																<td>当事人</td>
+																<td>朱平</td>
+															</tr>
+															<tr>
+																<td>时间</td>
+																<td style="width: 30%;">2018-02-12 12:23:23</td>
+															</tr>
+															<tr>
+																<td>地点</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>违法行为</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>处罚情况</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+														</table>
+													</div>
+												</li>
+												<li class="mui-table-view-cell">
+													<div class="mui-row">
+														<table class="li-card-mes-table-llist">
+															<tr>
+																<td rowspan="2"><img src="../../../images/photo-1.png"/></td>
+																<td>当事人</td>
+																<td>朱平</td>
+															</tr>
+															<tr>
+																<td>时间</td>
+																<td style="width: 30%;">2018-02-12 12:23:23</td>
+															</tr>
+															<tr>
+																<td>地点</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>违法行为</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>处罚情况</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+														</table>
+													</div>
+												</li>
+												<li class="mui-table-view-cell">
+													<div class="mui-row">
+														<table class="li-card-mes-table-llist">
+															<tr>
+																<td rowspan="2"><img src="../../../images/photo-1.png"/></td>
+																<td>当事人</td>
+																<td>朱平</td>
+															</tr>
+															<tr>
+																<td>时间</td>
+																<td style="width: 30%;">2018-02-12 12:23:23</td>
+															</tr>
+															<tr>
+																<td>地点</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>违法行为</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+															<tr>
+																<td>处罚情况</td>
+																<td colspan="2">
+																	地点地点地点地点地点地点地点地地点地点地点地点地点地点地点地点地点地点地点地点地点
+																</td>
+															</tr>
+														</table>
+													</div>
+												</li>
+												
+												
+												
+											</ul>
+							            </div>
+							        </li>
+							    </ul>
+		           			</td>
+		           		</tr>
+		           </table>
+		        </li>
+		        
+		        
+		    </ul>
 			
-		</div>
 	</body>
 
 </html>

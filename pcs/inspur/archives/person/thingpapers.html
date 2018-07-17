@@ -8,29 +8,28 @@
 		<link href="../../../css/mui.min.css" rel="stylesheet" />
 		<script type="text/javascript" src="../../../js/mui.js" ></script>
 		<style>
-			table{
-				background-color: white;
+			ul{
+				font-size: 12px;
 			}
-			.dri-card-div thead td{
-				font-weight: 800;
+			.a-kuai-s{
+				border-left: 4px solid blue;
 			}
-			.driver-mes-card td{
+			.li-card-mes-table td{
 				width: 25%;
-				font-size: 12px;
-				text-align: center;
-				border: 1px solid rgb(239, 239, 244);
 			}
-			.card-title-d{
-				border-left: 5px solid #065BB7;
+			.li-card-mes-table td:only-of-type(odd){
+				width: 25%;
+				
+			}
+			li{
+				margin-bottom: 10px;
 				background-color: white;
-				margin-left: 5px;
-				font-weight: 800;
+				border: 0px solid;
+				box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+				
 			}
-			.crj-mes-card td{
-				width: 15%;
-				font-size: 12px;
-				text-align: center;
-				border: 1px solid rgb(239, 239, 244);
+			.mui-table-view{
+				background-color: #efeff4;				
 			}
 		</style>
 			
@@ -42,63 +41,100 @@
         	时间：2018-07-16
         	描述：人员档案物品证件
         -->
-        <div class="content">
-        	<div style="height:30px;background-color: white;border-bottom: 1px solid rgb(239, 239, 244);">
-        		<img src="../../../images/tidcard.png"  style="float: left;margin: 2px 0 0 5px;"/>
-        		<div style="height: 30px;line-height: 25px;margin-left: 35px;font-size: 12px;">
-        			 <strong>证件(7)</strong>
-        		</div>
-        	</div>
-        	<div class="dri-card-div">
-        		<div class="card-title-d">
-        			&nbsp;&nbsp;驾驶证
-        		</div>
-        		<table class="driver-mes-card">
-        			<thead>
-        				<td>驾驶证号码</td>
-        				<td>准驾车型</td>
-        				<td>有效期</td>
-        				<td>状态</td>
-        			</thead>
-        			<tbody>
-        				<tr>
-        					<td>123456789123456789</td>
-        					<td>C1</td>
-        					<td>20101221~20201221</td>
-        					<td>正常</td>
-        				</tr>
-        			</tbody>
-        		</table>
-        	</div>
-        	
-        	<div class="dri-card-div">
-        		<div class="card-title-d">
-        			&nbsp;&nbsp;出入境证件
-        		</div>
-        		<table class="crj-mes-card">
-        			<thead>
-        				<td  >证件号码</td>
-        				<td  >申请种类</td>
-        				<td  >办证类别</td>
-        				<td  >出境是由</td>
-        				<td  >拟前往地</td>
-        				<td  >审批日期</td>
-        			</thead>
-        			<tbody>
-        				<tr>
-        					<td>EB6316974</td>
-        					<td>大陆居民往来台湾通行证</td>
-        					<td>首次申请</td>
-        					<td>个人旅游</td>
-        					<td>澳大利亚</td>
-        					<td>2015014</td>
-        				</tr>
-        			</tbody>
-        		</table>
-        	</div>
-        	
-        </div>	
-			
+			<ul class="mui-table-view"> 
+		        <li class="mui-table-view-cell mui-collapse">
+		            <a class="mui-navigate-right a-kuai-s" href="#">驾驶证</a>
+		            <div class="mui-collapse-content">
+		            	<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								 <table class="li-card-mes-table">
+					           		<tr>
+					           			<td>驾照号码</td>
+					           			<td>123456789123456789</td>
+					           		</tr>
+					           		<tr>
+					           			<td>准假车型</td>
+					           			<td >C1</td>
+					           			<td>状态</td>
+					           			<td >正常</td>
+					           		</tr>
+					           		<tr>
+					           			<td>有效期</td>
+					           			<td>20101221~20201221</td>
+					           		</tr>
+					           </table>
+							</li>
+						</ul>
+		            </div>
+		        </li>
+		        <li class="mui-table-view-cell mui-collapse">
+		            <a class="mui-navigate-right a-kuai-s" href="#">出入境证件</a>
+		            <div class="mui-collapse-content">
+		            	<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								 <table class="li-card-mes-table">
+					           		<tr>
+					           			<td>证件号码</td>
+					           			<td>EB6316974</td>
+					           			<td>审批日期</td>
+					           			<td>20171211</td>
+					           		</tr>
+					           		<tr>
+					           			<td>出境是由</td>
+					           			<td>个人旅游</td>
+					           			<td>有效期</td>
+					           			<td>20101221~20201221</td>
+					           		</tr>
+					           		<tr>
+					           			<td>申请种类</td>
+					           			<td colspan="3">大陆居民往来台湾通行证</td>
+					           		</tr>
+					           </table>
+							</li>
+							<li class="mui-table-view-cell">
+								 <table class="li-card-mes-table">
+					           		<tr>
+					           			<td>证件号码</td>
+					           			<td>EB6316974</td>
+					           			<td>审批日期</td>
+					           			<td>20171211</td>
+					           		</tr>
+					           		<tr>
+					           			<td>出境是由</td>
+					           			<td>个人旅游</td>
+					           			<td>有效期</td>
+					           			<td>20101221~20201221</td>
+					           		</tr>
+					           		<tr>
+					           			<td>申请种类</td>
+					           			<td colspan="3">大陆居民往来台湾通行证</td>
+					           		</tr>
+					           </table>
+							</li>
+							<li class="mui-table-view-cell">
+								 <table class="li-card-mes-table">
+					           		<tr>
+					           			<td>证件号码</td>
+					           			<td>EB6316974</td>
+					           			<td>审批日期</td>
+					           			<td>20171211</td>
+					           		</tr>
+					           		<tr>
+					           			<td>出境是由</td>
+					           			<td>个人旅游</td>
+					           			<td>有效期</td>
+					           			<td>20101221~20201221</td>
+					           		</tr>
+					           		<tr>
+					           			<td>申请种类</td>
+					           			<td colspan="3">大陆居民往来台湾通行证</td>
+					           		</tr>
+					           </table>
+							</li>
+						</ul>
+		            </div>
+		        </li>
+		    </ul>
 	</body>
 
 </html>

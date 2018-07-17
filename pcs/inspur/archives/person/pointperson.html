@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell">
+			<div class="mui-row">
+				<div class="mui-col-sm-6">南京-重庆<br/> 3U8544 7F</div>
+				<div class="mui-col-sm-6">2017-01-16</div>
+			</div>
+		</li>
+		<li class="mui-table-view-cell">
+			<div class="mui-row">
+				<div class="mui-col-sm-6">南京-重庆<br/> 3U8544 7F</div>
+				<div class="mui-col-sm-6">2017-01-16</div>
+			</div>
+		</li>
+		<li class="mui-table-view-cell">
+			<div class="mui-row">
+				<div class="mui-col-sm-6">南京-重庆<br/> 3U8544 7F</div>
+				<div class="mui-col-sm-6">2017-01-16</div>
+			</div>
+		</li>
+		<li class="mui-table-view-cell">
+			<div class="mui-row">
+				<div class="mui-col-sm-6">南京-重庆<br/> 3U8544 7F</div>
+				<div class="mui-col-sm-6">2017-01-16</div>
+			</div>
+		</li>
+	</ul>
+
+	<body>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="text/html">
+			{{each list as v i}}
+			<li class="mui-table-view-cell">
+			<div class="mui-row">
+				<div class="mui-col-sm-6">{{i}}{{v.}}-重庆<br/> 3U8544 7F</div>
+				<div class="mui-col-sm-6">2017-01-16</div>
+			</div>
+		</li>
+			{{/each}}
+		</script>
+	</body>
+
+</html>
